@@ -29,7 +29,7 @@ public class LogFilter implements Filter {
 
         try {
             log.info("REQUEST [{}][{}]",uuid,requestURI);
-            chain.doFilter(request,response);
+            chain.doFilter(request,response); //이것을 실행하면 여기서 로직이 끝난다. 컨틀로러 호출 x
         } catch (Exception e) {
             throw e;
         } finally {
